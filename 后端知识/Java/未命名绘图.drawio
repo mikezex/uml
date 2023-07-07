@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-07-07T03:14:01.670Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36" etag="-R8BTwRCyT1_dHqZl-bU" version="21.6.1" type="github" pages="2">
+<mxfile host="app.diagrams.net" modified="2023-07-07T03:14:41.844Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36" etag="yKF2_D_I8HcexNcL9eRQ" version="21.6.1" type="github" pages="2">
   <diagram name="缓存穿透" id="NYeGkVjz_iJQMs_fjLAV">
     <mxGraphModel dx="2074" dy="1116" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -24,7 +24,7 @@
             <mxPoint x="1" as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="IJ4MwXWZd-iRa8kyLuOU-6" value="Redis" style="shape=cube;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;darkOpacity=0.05;darkOpacity2=0.1;" vertex="1" parent="1">
+        <mxCell id="IJ4MwXWZd-iRa8kyLuOU-6" value="Redis" style="shape=cube;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;darkOpacity=0.05;darkOpacity2=0.1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
           <mxGeometry x="294" y="370" width="120" height="80" as="geometry" />
         </mxCell>
         <mxCell id="IJ4MwXWZd-iRa8kyLuOU-7" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1" source="IJ4MwXWZd-iRa8kyLuOU-2">
@@ -91,7 +91,7 @@
             <mxPoint x="1" as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="O5AO6i8DZXNgm2ZRtIz9-6" value="Redis" style="shape=cube;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;darkOpacity=0.05;darkOpacity2=0.1;" vertex="1" parent="1">
+        <mxCell id="O5AO6i8DZXNgm2ZRtIz9-6" value="Redis" style="shape=cube;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;darkOpacity=0.05;darkOpacity2=0.1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
           <mxGeometry x="540" y="345" width="120" height="80" as="geometry" />
         </mxCell>
         <mxCell id="O5AO6i8DZXNgm2ZRtIz9-7" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1" source="O5AO6i8DZXNgm2ZRtIz9-2">
