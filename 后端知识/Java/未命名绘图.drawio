@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-07-07T03:08:58.789Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36" etag="qQPcNbZCb7fdZi1qfAov" version="21.6.1" type="github">
+<mxfile host="app.diagrams.net" modified="2023-07-07T03:14:01.670Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36" etag="-R8BTwRCyT1_dHqZl-bU" version="21.6.1" type="github" pages="2">
   <diagram name="缓存穿透" id="NYeGkVjz_iJQMs_fjLAV">
     <mxGraphModel dx="2074" dy="1116" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -62,6 +62,94 @@
         </mxCell>
         <mxCell id="IJ4MwXWZd-iRa8kyLuOU-13" value="DB" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" vertex="1" parent="1">
           <mxGeometry x="650" y="380" width="60" height="80" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="9xiJIsHl5YM_eRyAVVOP" name="布隆过滤器-缓存穿透">
+    <mxGraphModel dx="2074" dy="1116" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="O5AO6i8DZXNgm2ZRtIz9-1" value="Actor" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;" vertex="1" parent="1">
+          <mxGeometry x="80" y="270" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="O5AO6i8DZXNgm2ZRtIz9-2" value="Actor" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;" vertex="1" parent="1">
+          <mxGeometry x="80" y="370" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="O5AO6i8DZXNgm2ZRtIz9-3" value="Actor" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;" vertex="1" parent="1">
+          <mxGeometry x="80" y="475" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="O5AO6i8DZXNgm2ZRtIz9-4" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1" source="O5AO6i8DZXNgm2ZRtIz9-1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="550" y="590" as="sourcePoint" />
+            <mxPoint x="270" y="380" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="O5AO6i8DZXNgm2ZRtIz9-5" value="匹配不到的Key" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="O5AO6i8DZXNgm2ZRtIz9-4">
+          <mxGeometry x="-0.29" y="1" relative="1" as="geometry">
+            <mxPoint x="1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="O5AO6i8DZXNgm2ZRtIz9-6" value="Redis" style="shape=cube;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;darkOpacity=0.05;darkOpacity2=0.1;" vertex="1" parent="1">
+          <mxGeometry x="540" y="345" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="O5AO6i8DZXNgm2ZRtIz9-7" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1" source="O5AO6i8DZXNgm2ZRtIz9-2">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="550" y="590" as="sourcePoint" />
+            <mxPoint x="260" y="400" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="O5AO6i8DZXNgm2ZRtIz9-8" value="匹配不到的Key" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="O5AO6i8DZXNgm2ZRtIz9-7">
+          <mxGeometry x="-0.2089" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="O5AO6i8DZXNgm2ZRtIz9-9" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1" source="O5AO6i8DZXNgm2ZRtIz9-3">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="550" y="590" as="sourcePoint" />
+            <mxPoint x="260" y="430" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="O5AO6i8DZXNgm2ZRtIz9-10" value="匹配不到的Key" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="O5AO6i8DZXNgm2ZRtIz9-9">
+          <mxGeometry x="-0.1519" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="O5AO6i8DZXNgm2ZRtIz9-11" value="" style="endArrow=classic;html=1;rounded=0;exitX=0;exitY=0;exitDx=120;exitDy=50;exitPerimeter=0;" edge="1" parent="1" source="O5AO6i8DZXNgm2ZRtIz9-6">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="796" y="565" as="sourcePoint" />
+            <mxPoint x="886" y="395" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="O5AO6i8DZXNgm2ZRtIz9-12" value="缓存匹配不到直接访问数据库" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="O5AO6i8DZXNgm2ZRtIz9-11">
+          <mxGeometry x="-0.1209" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="O5AO6i8DZXNgm2ZRtIz9-13" value="DB" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" vertex="1" parent="1">
+          <mxGeometry x="896" y="355" width="60" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="O5AO6i8DZXNgm2ZRtIz9-16" value="布隆过滤器" style="swimlane;horizontal=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="300" y="180" width="90" height="420" as="geometry" />
+        </mxCell>
+        <mxCell id="O5AO6i8DZXNgm2ZRtIz9-19" value="匹配请求中的key是否存在，如果不存在直接返回" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;rotation=-90;" vertex="1" parent="O5AO6i8DZXNgm2ZRtIz9-16">
+          <mxGeometry x="-95" y="190" width="280" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="O5AO6i8DZXNgm2ZRtIz9-21" value="" style="shape=flexArrow;endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="370" y="640" as="sourcePoint" />
+            <mxPoint x="230" y="640" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="O5AO6i8DZXNgm2ZRtIz9-22" value="key不存在直接返回" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="245" y="608" width="130" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="O5AO6i8DZXNgm2ZRtIz9-23" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="O5AO6i8DZXNgm2ZRtIz9-16">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="390" y="590" as="sourcePoint" />
+            <mxPoint x="530" y="390" as="targetPoint" />
+          </mxGeometry>
         </mxCell>
       </root>
     </mxGraphModel>
